@@ -13,8 +13,11 @@ $result = rtrim(str_replace(basename($_SERVER['SCRIPT_NAME']), '', $request["pat
 $url = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'].$result;
 */
 ?>
-<html>
+<!DOCTYPE html>
+<html xml:lang="en-gb" lang="en-gb">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <head>
+<title>Education Board Result API</title>
 <script src="jquery.js"></script>
 </head>
 <body>
