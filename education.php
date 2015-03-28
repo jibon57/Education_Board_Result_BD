@@ -1,10 +1,17 @@
 <?php
+/**
+* @author	Jibon Lawrence Costa
+* @copyright Copyright (C) 2015, Jibon Lawrence Costa. All rights reserved.
+* @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*/
 $request = parse_url($_SERVER['REQUEST_URI']);
 $result = rtrim(str_replace(basename($_SERVER['SCRIPT_NAME']), '', $request["path"]), '');
 $url = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'].$result;
 ?>
 <html>
-<script src="../jquery.js"></script>
+<head>
+<script src="jquery.js"></script>
+</head>
 <body>
 <script type="text/javascript">
 jQuery("document").ready(function(){
@@ -16,7 +23,7 @@ jQuery("document").ready(function(){
 		var roll = $("#roll").val();
 		var url = "<?php echo $url;?>proxy.php?exam="+exam+"&year="+year+"&board="+board+"&roll="+roll;
 		//console.log(url);
-		$("#result").html("loading.....");
+		$("#result").html("<img src='loading.gif' alt= 'loading...'?>");
 		$.ajax({
 			url: url,
 			method: 'GET',
