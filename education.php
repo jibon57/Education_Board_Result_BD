@@ -4,9 +4,14 @@
 * @copyright Copyright (C) 2015, Jibon Lawrence Costa. All rights reserved.
 * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 */
+
+/*
+If your application located in different folder etc..
+
 $request = parse_url($_SERVER['REQUEST_URI']);
 $result = rtrim(str_replace(basename($_SERVER['SCRIPT_NAME']), '', $request["path"]), '');
 $url = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'].$result;
+*/
 ?>
 <html>
 <head>
@@ -21,7 +26,7 @@ jQuery("document").ready(function(){
 		var year = $("#year").val();
 		var board = $("#board").val();
 		var roll = $("#roll").val();
-		var url = "<?php echo $url;?>helper.php?exam="+exam+"&year="+year+"&board="+board+"&roll="+roll;
+		var url = "helper.php?exam="+exam+"&year="+year+"&board="+board+"&roll="+roll;
 		$("#result").html("<img src='loading.gif' alt= 'loading...'>");
 		$.ajax({
 			url: url,
