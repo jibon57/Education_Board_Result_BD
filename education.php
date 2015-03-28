@@ -22,7 +22,7 @@ jQuery("document").ready(function(){
 		var board = $("#board").val();
 		var roll = $("#roll").val();
 		var url = "<?php echo $url;?>helper.php?exam="+exam+"&year="+year+"&board="+board+"&roll="+roll;
-		$("#result").html("<img src='loading.gif' alt= 'loading...'?>");
+		$("#result").html("<img src='loading.gif' alt= 'loading...'>");
 		$.ajax({
 			url: url,
 			method: 'GET',
