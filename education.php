@@ -46,7 +46,7 @@ jQuery("document").ready(function(){
 	});
 });
 </script>
-<select name="exam" class="textfield05" id="exam" onchange="fd(this);">
+<select name="exam" class="textfield05" id="exam" >
                             <option value="">Select One</option>
                             <option value="jsc">JSC/JDC</option>
                             <option value="ssc">SSC/Dakhil</option>
