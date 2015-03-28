@@ -69,10 +69,9 @@ jQuery("document").ready(function(){
 						  <option value="tec">Technical</option>
 						  <option value="dibs">DIBS(Dhaka)</option>
                           </select><br>
-						   <input name="roll" class="textfield06" id="roll" maxlength="6" onkeypress="return onlyNumbers()" type="text">
+						  <input name="roll" class="textfield06" id="roll" maxlength="6" type="text">
 <br>
-<input name="Reset" id="button" value="Reset" type="reset">
-                            <input name="button2" id="submit" value="Submit" type="submit">
+                            <button id="submit">Submit</button>
 
                        
 <div id="result">
