@@ -22,7 +22,6 @@ jQuery("document").ready(function(){
 		var board = $("#board").val();
 		var roll = $("#roll").val();
 		var url = "<?php echo $url;?>helper.php?exam="+exam+"&year="+year+"&board="+board+"&roll="+roll;
-		//console.log(url);
 		$("#result").html("<img src='loading.gif' alt= 'loading...'?>");
 		$.ajax({
 			url: url,
@@ -31,8 +30,12 @@ jQuery("document").ready(function(){
 			cache: false
 		}).done (function (msg){
 			$.each(msg, function(key, val){
-				//console.log(val[0]['results']);
-				$("#result").html(val[0]['results']);
+				if(val[0]['ISSUCCESS'] == "Y") {
+					$("#result").html(val[0]['results']);
+				}
+				else {
+					$("#result").html("<span style='color: red;'>RESULT NOT FOUND!</span>");
+				}
 			});
 		});
 	});
