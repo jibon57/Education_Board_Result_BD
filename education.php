@@ -15,8 +15,8 @@ $url = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'].$result;
 ?>
 <!DOCTYPE html>
 <html xml:lang="en-gb" lang="en-gb">
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>Education Board Result API</title>
 	<script src="jquery.js"></script>
 </head>
